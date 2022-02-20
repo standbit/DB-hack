@@ -2,7 +2,7 @@
 В файле `scripts.py` собраны скрипты, меняющие данные электронного дневника школы.
 
 ## Использование
-- Эксперименты проводились над сайтом электронного дневника [школы](https://github.com/devmanorg/e-diary)
+- Эксперименты проводились над сайтом электронного дневника [школы](https://github.com/devmanorg/e-diary).
 - В README подробно указано, как развернуть сайт, и как он работает. 
 - Установите у себя сайт дневника, следуя инструкциям в его репозитории.
 - Необходимо подключить БД.  
@@ -19,7 +19,7 @@ $ python manage.py shell_plus
 ```python
 >>> from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 ```
-Модулт пригодятся для отлавливания исключений.
+Модули пригодятся для отлавливания исключений.
 ```python
 >>> from commendations import commendations
 ```
