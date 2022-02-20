@@ -31,5 +31,36 @@ $ python manage.py shell_plus
 Далее описание функций из `scripts.py`
 
 ### fix_marks(child_name)
-Принимает на вход имя ученика. Меняет все двойки и тройки ученика на пятерки. 
-В случае неверного ввода имени, поднимет исключение. 
+Принимает на вход имя и фамилию ученика. Меняет все двойки и тройки ученика на пятерки. 
+В случае неверного или неоднозначного ввода, поднимет исключение.
+Пример:
+
+![image](https://user-images.githubusercontent.com/77130336/154846078-99f915a0-7e3d-4d2e-a975-b59ad39e5636.png)
+
+### delete_chastisements(child_name)
+Принимает на вход имя и фамилию ученика. Удаляет все замечания ученика.
+
+Пример неудачи:
+
+![image](https://user-images.githubusercontent.com/77130336/154846512-dee21f10-7dcd-4e9a-9d3a-a23ad3c9670c.png)
+
+Пример удачный:
+
+![image](https://user-images.githubusercontent.com/77130336/154846548-26ffd703-3eb3-4925-b51f-2656a9f9e999.png)
+
+![image](https://user-images.githubusercontent.com/77130336/154846565-13078f9e-72bb-4f42-91a3-fc88e936f7ce.png)
+
+![image](https://user-images.githubusercontent.com/77130336/154846577-c021414b-53c2-45f6-9fa4-593237a34ee5.png)
+
+
+### create_commendation(child_name, subject_title)
+Принимает на вход имя фамилию ученика и предмет. Создает одну уникальную похвалу ученику по указанному предмету. 
+Дата похвалы совпадает с датой проведения предмета. 
+
+Пример:
+
+![image](https://user-images.githubusercontent.com/77130336/154847067-d40c9c53-2d76-4945-aefc-9681326675f6.png)
+
+![image](https://user-images.githubusercontent.com/77130336/154847090-0c7d932c-e074-4425-b667-c047471fcc84.png)
+
+
