@@ -1,8 +1,3 @@
-from commendations import commendations
-import random
-from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
-
-
 def fix_marks(child_name):
 	try:
 		child = Schoolkid.objects.get(full_name__contains=child_name)
@@ -33,7 +28,6 @@ def delete_chastisements(child_name):
 def create_commendation(child_name, subject_title):
 	try:
 		child = Schoolkid.objects.get(full_name__contains=child_name)
-		subject = Lesson.objects.get(subject__title=subject_title)
 		subjects = Lesson.objects.filter(
 		    year_of_study=child.year_of_study,
 		    group_letter=child.group_letter,
