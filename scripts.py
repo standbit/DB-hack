@@ -1,9 +1,9 @@
 def fix_marks(child_name):
     try:
         child = Schoolkid.objects.get(full_name__contains=child_name)
-    except ObjectDoesNotExist:
+    except Schoolkid.DoesNotExist:
         print("Нет ученика с таким именем и фамилией")
-    except MultipleObjectsReturned:
+    except Schoolkid.MultipleObjectsReturned:
         print("Найдено несколько учеников с введенными данными.")
     bad_marks = Mark.objects.filter(schoolkid=child, points__in=[2, 3])
     for mark in bad_marks:
@@ -15,9 +15,9 @@ def fix_marks(child_name):
 def delete_chastisements(child_name):
     try:
         child = Schoolkid.objects.get(full_name__contains=child_name)
-    except ObjectDoesNotExist:
+    except Schoolkid.DoesNotExist:
         print("Нет ученика с таким именем и фамилией")
-    except MultipleObjectsReturned:
+    except Schoolkid.MultipleObjectsReturned:
         print("Найдено несколько учеников с введенными данными.")
     chastisements = Chastisement.objects.filter(schoolkid=child)
     for chastisement in chastisements:
@@ -40,8 +40,8 @@ def create_commendation(child_name, subject_title):
             teacher=subject.teacher,
             text=commendation,
             created=subject.date)
-    except ObjectDoesNotExist:
+    except Schoolkid.DoesNotExist or Lesson.DoesNotExist:
         print("Нет ученика или предмета с таким именем.")
-    except MultipleObjectsReturned:
+    except Schoolkid.MultipleObjectsReturned:
         print("Найдено несколько учеников с введенными данными.")
     return
