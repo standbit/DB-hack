@@ -62,5 +62,3 @@ $ python manage.py shell_plus
 ![image](https://user-images.githubusercontent.com/77130336/154847067-d40c9c53-2d76-4945-aefc-9681326675f6.png)
 
 ![image](https://user-images.githubusercontent.com/77130336/154847090-0c7d932c-e074-4425-b667-c047471fcc84.png)
-
-
