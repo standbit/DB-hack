@@ -40,13 +40,15 @@ $ python manage.py shell_plus
 Принимает на вход имя и фамилию ученика. Меняет все двойки и тройки ученика на пятерки. 
 Пример:
 
-было - 
+![image](https://user-images.githubusercontent.com/77130336/155797496-07d5ecd5-5f46-45f7-953b-35c32fd0a1cf.png)
 
+Было
 
+![image](https://user-images.githubusercontent.com/77130336/155797002-2e62582f-224f-4a58-b435-9c1d021c90ff.png)
 
-стало -
+Стало
 
-
+![image](https://user-images.githubusercontent.com/77130336/155797632-b6323ab9-b0d4-4186-bd7c-21e019b0fdd3.png)
 
 ### delete_chastisements(child_name)
 Принимает на вход имя и фамилию ученика. Удаляет все замечания ученика.
