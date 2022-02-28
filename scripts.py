@@ -1,4 +1,4 @@
-def catch_exception(child_name):
+def get_child_object(child_name):
     try:
         child = Schoolkid.objects.get(full_name__contains=child_name)
         pass
@@ -10,7 +10,7 @@ def catch_exception(child_name):
 
 
 def fix_marks(child_name):
-    child = catch_exception(child_name)
+    child = get_child_object(child_name)
     bad_marks = Mark.objects.filter(schoolkid=child, points__in=[2, 3])
     for mark in bad_marks:
         mark.points = 5
@@ -19,7 +19,7 @@ def fix_marks(child_name):
 
 
 def delete_chastisements(child_name):
-    child = catch_exception(child_name)
+    child = get_child_object(child_name)
     chastisements = Chastisement.objects.filter(schoolkid=child)
     for chastisement in chastisements:
         chastisement.delete()
@@ -27,7 +27,7 @@ def delete_chastisements(child_name):
 
 
 def create_commendation(child_name, subject_title):
-    child = catch_exception(child_name)
+    child = get_child_object(child_name)
     subjects = Lesson.objects.filter(
         year_of_study=child.year_of_study,
         group_letter=child.group_letter,
